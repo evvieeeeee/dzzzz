@@ -57,7 +57,7 @@ class Dog:
         elif live_cube == 3:
             self.to_sleep()
 
-         self.end_of_day()
+        self.end_of_day()
         self.is_alive()
 
 dog = Dog(name="Chennie")
