@@ -11,6 +11,7 @@ class Dog:
         self.gladness += 10
         self.health += 5
 
+
     def to_sleep(self):
         print("Let's go sleep")
         self.gladness += 5
@@ -29,7 +30,8 @@ class Dog:
 
     def is_alive(self):
         if self.health < 4:
-            print("I can't..")
+            print("I feel bad..")
+            self.to_being_treated()
             self.alive = False
         elif self.gladness <= 10:
             print("I'm sad but healthy")
@@ -51,11 +53,11 @@ class Dog:
         if live_cube == 1:
             self.to_walk()
         elif live_cube == 2:
-            self.to_being_treated()
+            self.to_play()
         elif live_cube == 3:
             self.to_sleep()
 
-        self.end_of_day()
+         self.end_of_day()
         self.is_alive()
 
 dog = Dog(name="Chennie")
