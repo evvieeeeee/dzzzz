@@ -32,7 +32,7 @@ class Dog:
             print("I can't..")
             self.alive = False
         elif self.gladness <= 10:
-            print("I'm sad…")
+            print("I'm sad but healthy")
             self.alive = False
         elif self.health > 10:
             print("Everything is OK")
