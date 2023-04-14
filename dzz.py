@@ -15,7 +15,7 @@ class Building:
         self.konez = konez
 
     def getdata(self):
-        print('Building ans store are construction in', self.city, 'and was allocated', self.money, 'pounds.')
+        print('Building is construction in', self.city, 'and was allocated', self.money, 'pounds.')
         print('Construction started at', self.nachalo, 'and is scheduled to end in', self.konez)
 
 Building()
