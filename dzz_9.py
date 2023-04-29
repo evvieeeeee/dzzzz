@@ -1,33 +1,18 @@
-from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
+from bs4 import BeautifulSoup
+import lxml
 
-obmen = int(input("Введите количество гривен, которые нужно конвертировать, после нажмите Enter (ЦЕЛЬНЫЕ ЧИСЛА): "))
+obmen = int(input("Введите количество гривен для конвертации и нажмите ENTER: "))
 counter = 0
-counter2 = 0
 
 def run(playwright):
+    global obmen
     page = playwright.chromium.launch(headless=False).new_page()
-    page.goto('https://bank.gov.ua')
-
-    soup = BeautifulSoup(page.content(), 'lxml')
+    page.goto('https://bank.gov.ua/')
+    soup = BeautifulSoup(page.content(),'lxml')
     value = float(soup.select('.value-full')[1].text.strip().replace(",", "."))
     result = (obmen / value)
-    print(round(result, 2))
-    #for dollar in soup.select('.value-full '):
-        #global counter
-        #global counter2
-
-        #if counter == 0:
-            #print("1. Количество Евро (ОКРУГЛЕНО ДО СОТЫХ):")
-        #if counter2 == 1:
-            #print("2. Количество Долларов США (ОКРУГЛЕНО ДО СОТЫХ):")
-        #value = dollar.select_one('small').text
-        #value = value.replace(",", ".")
-        #value2 = float(value)
-        #result = (obmen / value2)
-        #print(round(result, 2))
-        #counter += 1
-        #counter2 += 1
+    print(round(result, 2), 'долларов')
 
 with sync_playwright() as playwright:
     run(playwright)
