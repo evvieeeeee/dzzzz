@@ -1,17 +1,18 @@
 from random import random
 class RandomIncrease:
     def __init__(self, amount):
-        self.amo = amount
-        self.cur = 0
+        self.i = 0
+        self.amount = amount
 
     def __iter__(self):
-        return generator
+        self.i = 0
+        yield self
 
-    def random_increase(amount):
+    def random_increase(self):
         cur = 0
-        while amount > 0:
+        while self > 0:
             cur += random()
-            amount -= 1
+            self -= 1
             yield round(cur, 2)
 
     generator = random_increase(5)

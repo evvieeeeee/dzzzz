@@ -191,3 +191,10 @@ nick = Human(name="Nick")
 for day in range(1,8):
     if nick.live(day) == False:
         break
+
+import logging
+logging.basicConfig(level=logging.DEBUG,
+ filename="logs.log",
+ filemode="w")
+logging.debug("debug")
+logging.info("info")
