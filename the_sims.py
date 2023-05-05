@@ -194,7 +194,7 @@ for day in range(1,8):
 
 import logging
 logging.basicConfig(level=logging.DEBUG,
- filename="logs.log",
- filemode="w")
+                    filename="dzzz8/logs.log",
+                    filemode="w")
 logging.debug("debug")
 logging.info("info")
