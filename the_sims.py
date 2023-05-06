@@ -13,7 +13,10 @@ try:
 except Exception:
     logging.exception("error reading the file")
 try:
-
+    if ('self.money') < 90:
+        logging.warning("Nick is not okay")
+except Exception:
+    logging.exception("error reading the file")
 logging.info("Nick is okay")
 
 class Human:
