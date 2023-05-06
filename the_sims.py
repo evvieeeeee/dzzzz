@@ -1,4 +1,21 @@
 import random
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    filename="logs.log",
+                    filemode="w",
+                    format="We have next logging message:%(asctime)s:%(levelname)s - %(message)s")
+try:
+    with open('the_sims.py') as f:
+        file_data = f.read()
+        words = file_data.split(" ")
+        num_words = len(words)
+        logging.debug("this file has %d words", num_words)
+except Exception:
+    logging.exception("error reading the file")
+try:
+
+logging.info("Nick is okay")
+
 class Human:
     def __init__(self, name="Human", job=None,
                  home=None, car=None):
@@ -192,9 +209,3 @@ for day in range(1,8):
     if nick.live(day) == False:
         break
 
-import logging
-logging.basicConfig(level=logging.DEBUG,
-                    filename="dzzz8/logs.log",
-                    filemode="w")
-logging.debug("debug")
-logging.info("info")
