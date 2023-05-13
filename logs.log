@@ -1,2 +1,8 @@
-We have next logging message:2023-05-06 21:01:06,693:DEBUG - this file has 2128 words
-We have next logging message:2023-05-06 21:01:06,693:INFO - Nick is okay
+We have next logging message:2023-05-06 21:31:00,264:DEBUG - this file has 2154 words
+We have next logging message:2023-05-06 21:31:00,265:ERROR - error reading the file
+Traceback (most recent call last):
+  File "C:\Users\Asus_PC\Downloads\Python\dzzzz\the_sims.py", line 16, in <module>
+    if ('self.money') < 90:
+       ^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'
+We have next logging message:2023-05-06 21:31:00,268:INFO - Nick is okay
